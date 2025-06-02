@@ -22,12 +22,11 @@ jobs:
           VERSION=$(jq -r .version package.json)
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
+
       - name: Create package directory and copy contents
         run: |
-          mkdir package
-          shopt -s dotglob
-          cp -r * package/
-          shopt -u dotglob
+          mkdir -p package
+          rsync -av --exclude=package ./ package/
 
       - name: Compress package directory into tgz
         run: tar -czvf package.tgz package
