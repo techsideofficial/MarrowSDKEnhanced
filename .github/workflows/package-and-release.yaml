@@ -26,7 +26,7 @@ jobs:
       - name: Create package directory and copy contents
         run: |
           mkdir -p package
-          rsync -av --exclude=package ./ package/
+          rsync -av --exclude=package --exclude=.git --exclude=.github ./ package/
 
       - name: Compress package directory into tgz
         run: tar -czvf package.tgz package
