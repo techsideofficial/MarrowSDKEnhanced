@@ -1,10 +1,10 @@
 {
   "name": "com.arparec.template.marrowsdkenhancedpubva",
   "displayName": "Marrow SDK Enhanced",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "template",
   "host": "hub",
-  "unity": "2021.2",
+  "unity": "2021.3",
   "description": "A project with everything set up for BONELAB mod development.",
   "dependencies": {
     "com.unity.collab-proxy": "1.13.5",
@@ -15,14 +15,14 @@
     "com.unity.ugui": "1.0.0"
   },
   "_upm": {
-    "changelog": "- Initial release."
+    "changelog": "- Remove unnessesary files and prepare for public release."
   },
   "upmCi": {
     "footprint": "71f52aba0ce2c93733f41b29930d466806539fe5"
   },
   "repository": {
-    "url": "https://github.cds.internal.unity3d.com/unity/com.unity.template-3d.git",
+    "url": "https://github.com/techsideofficial/MarrowSDKEnhanced.git",
     "type": "git",
-    "revision": "42c551896396d50ffeafce36830bcf5367e74449"
+    "revision": "latest"
   }
 }
