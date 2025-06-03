@@ -1,0 +1,60 @@
+name: Package, Compress, and Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  package-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get version from package.json
+        id: get_version
+        run: |
+          VERSION=$(jq -r .version package.json)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+
+      - name: Create package directory and copy contents
+        run: |
+          mkdir -p package
+          rsync -av --exclude=package --exclude=.git --exclude=.github ./ package/
+
+      - name: Compress package directory into tgz
+        run: tar -czvf package.tgz package
+
+      - name: Upload compressed package as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: package-tgz
+          path: package.tgz
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.get_version.outputs.version }}
+          name: Release v${{ steps.get_version.outputs.version }}
+          files: package.tgz
+          draft: false
+          prerelease: false
+
+      - name: Rename and re-upload artifact to release
+        env:
+          VERSION: ${{ steps.get_version.outputs.version }}
+        run: |
+          mv package.tgz "com.arparec.template.marrowsdkenhancedpubva-$VERSION.tgz"
+        # Upload the renamed file to the release (must use a separate action)
+      - name: Upload renamed tgz to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.get_version.outputs.version }}
+          files: com.arparec.template.marrowsdkenhancedpubva-${{ steps.get_version.outputs.version }}.tgz
+        if: always()
