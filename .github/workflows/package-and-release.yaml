@@ -50,11 +50,11 @@ jobs:
         env:
           VERSION: ${{ steps.get_version.outputs.version }}
         run: |
-          mv package.tgz "com.arparec.template.marrowsdkenhancedpubva-$VERSION.tgz"
+          mv package.tgz "com.unity.template.arparec-marrowsdkenhancedpubva-$VERSION.tgz"
         # Upload the renamed file to the release (must use a separate action)
       - name: Upload renamed tgz to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.get_version.outputs.version }}
-          files: com.arparec.template.marrowsdkenhancedpubva-${{ steps.get_version.outputs.version }}.tgz
+          files: com.unity.template.arparec-marrowsdkenhancedpubva-${{ steps.get_version.outputs.version }}.tgz
         if: always()
