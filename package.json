@@ -1,7 +1,7 @@
 {
   "name": "com.unity.template.arparec-marrowsdkenhancedpubva",
   "displayName": "Marrow SDK Enhanced",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "type": "template",
   "host": "hub",
   "unity": "2021.3",
