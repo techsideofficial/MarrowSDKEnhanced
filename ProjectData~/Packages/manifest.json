@@ -1,12 +1,12 @@
 {
   "dependencies": {
     "com.arparec.asecomshaders": "2.0.3",
-    "com.arparec.strata": "2.0.1",
-    "com.holadivinus.blpreviewtool": "2.4.10",
+    "com.holadivinus.blpreviewtool": "https://github.com/holadivinus/BL-PreviewTool.git",
     "com.holadivinus.blxrcomp": "https://github.com/holadivinus/BLXRComp.git",
-    "com.lakatrazz.marrowextrashaders": "1.0.0",
-    "com.lightbuzz.tarball": "1.5.0",
-    "com.ltk.materialconverter": "0.0.1",
+    "com.holadivinus.noodledevents": "https://github.com/holadivinus/Noodled-Events.git",
+    "com.lakatrazz.marrowextrashaders": "https://github.com/Lakatrazz/Marrow-Extra-Shaders.git",
+    "com.lightbuzz.tarball": "https://github.com/LightBuzz/Unity-Package-Export.git",
+    "com.ltk.materialconverter": "https://github.com/TeckUnity/MaterialConverter.git",
     "com.stresslevelzero.marrow.sdk.extended": "1.2.3",
     "com.unity.collab-proxy": "1.17.7",
     "com.unity.feature.development": "1.0.1",
@@ -55,14 +55,7 @@
       "name": "ArpaRec",
       "url": "https://upm--live-service.arparec.xyz",
       "scopes": [
-        "com.arparec",
-        "com.holadivinus.blpreviewtool",
-        "com.holadivinus.blxrcomp",
-        "com.holadivinus.noodledevents",
-        "com.lakatrazz.marrowextrashaders",
-        "com.lightbuzz.tarball",
-        "com.ltk.materialconverter",
-        "com.maranara.marrowflasks",
+        "com.arparec.asecomshaders",
         "com.stresslevelzero",
         "com.unity.render-pipelines",
         "com.unity.shadergraph"
