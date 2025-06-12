@@ -1,6 +1,10 @@
 {
   "dependencies": {
     "com.arparec.asecomshaders": "2.0.3",
+    "com.arparec.msdkeh.content.audio": "1.2.0",
+    "com.arparec.msdkeh.content.base": "1.2.0",
+    "com.arparec.msdkeh.content.misc": "1.2.0",
+    "com.arparec.msdkeh.content.shaders": "1.2.0",
     "com.holadivinus.blpreviewtool": "https://github.com/holadivinus/BL-PreviewTool.git",
     "com.holadivinus.blxrcomp": "https://github.com/holadivinus/BLXRComp.git",
     "com.holadivinus.noodledevents": "https://github.com/holadivinus/Noodled-Events.git",
@@ -56,10 +60,12 @@
       "url": "https://upm--live-service.arparec.xyz",
       "scopes": [
         "com.arparec.asecomshaders",
+        "com.arparec.msdkeh",
         "com.stresslevelzero",
         "com.unity.render-pipelines",
         "com.unity.shadergraph"
       ]
     }
-  ]
+  ],
+  "resolutionStrategy": "highestMinor"
 }

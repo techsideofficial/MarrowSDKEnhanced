@@ -1,7 +1,7 @@
 {
   "name": "com.unity.template.arparec-marrowsdkenhancedpubva",
   "displayName": "Marrow SDK Enhanced",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "type": "template",
   "host": "hub",
   "unity": "2021.3",
@@ -15,7 +15,7 @@
     "com.unity.ugui": "1.0.0"
   },
   "_upm": {
-    "changelog": "- Fix dependencies."
+    "changelog": "- Added some useful custom packages."
   },
   "upmCi": {
     "footprint": "71f52aba0ce2c93733f41b29930d466806539fe5"
